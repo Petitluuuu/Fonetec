@@ -1,0 +1,203 @@
+/* Couleurs principales */
+:root {
+    --primary-color: #FF8C00; /* Orange vif */
+    --secondary-color: #FF4500; /* Orange rougeâtre */
+    --accent-color: #FFA500; /* Orange clair */
+    --background-color: #FFF7E5; /* Beige clair pour arrière-plan */
+    --text-color: #333333; /* Couleur principale du texte */
+    --light-text-color: #FFFFFF; /* Texte clair (boutons, sur fond orange) */
+}
+
+/* Styles généraux */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--light-text-color);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Section Héro */
+#hero {
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Section À propos */
+#about {
+    text-align: center;
+    background-color: var(--light-text-color);
+    padding: 40px 20px;
+    margin-top: -20px;
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+/* Section Produits */
+#products {
+    padding: 40px 20px;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.product {
+    display: inline-block;
+    width: 45%;
+    margin: 20px;
+    text-align: center;
+    background: var(--light-text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.product img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.product p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Boutons (si nécessaires) */
+button {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Pied de page */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    animation: fadeOut 2.5s ease-out 1s forwards;
+}
+
+#intro img {
+    width: 200px;
+    height: auto;
+    animation: scaleUp 1s ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

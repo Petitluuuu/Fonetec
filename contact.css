@@ -1,0 +1,131 @@
+/* Couleurs principales */
+:root {
+    --primary-color: #FF8C00; /* Orange vif */
+    --secondary-color: #FF4500; /* Orange rougeâtre */
+    --background-color: #FFF7E5; /* Beige clair pour arrière-plan */
+    --text-color: #333333; /* Couleur principale du texte */
+    --light-text-color: #FFFFFF; /* Texte clair (boutons, sur fond orange) */
+}
+
+/* Styles généraux */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--light-text-color);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+header nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Section Héro */
+#hero {
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 1.2rem;
+}
+
+/* Section Contact */
+#contact {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+/* Table des contacts */
+.contact-table {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+}
+
+table td {
+    font-size: 1rem;
+}
+
+/* Pied de page */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
